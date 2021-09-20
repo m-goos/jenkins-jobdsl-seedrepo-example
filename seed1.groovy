@@ -7,6 +7,7 @@ definition {
             git{
               remote {
                 url("${githubUrl}")
+                // credentials("${SSH_CREDENTIALS}")
               }
               branch("*/do-not-merge")
             }
