@@ -2,19 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('This is a test pipeline') {
             steps {
-                echo 'Hello world..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                echo "Hello from this branch: ${env.GIT_BRANCH}"
             }
         }
     }
