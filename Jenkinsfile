@@ -1,9 +1,11 @@
 pipeline {
-    agent any 
+    agent any
+
     stages {
-        stage('Pipeline to seed or update all pipelines') {
+        stage('This is the pipeline for seed job 2') {
             steps {
-                jobDsl  targets: ['*.groovy'].join('\n')
+                echo "Hello from this branch: ${env.GIT_BRANCH}"
+                sh "printenv"
             }
         }
     }
